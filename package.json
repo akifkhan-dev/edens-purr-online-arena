@@ -1,0 +1,32 @@
+{
+  "name": "edens-purr-online-arena",
+  "version": "1.0.0",
+  "description": "Eden's Purr — Global 3D Anime Cat Arena (Authoritative Online Multiplayer Server & Preserved Three.js Frontend)",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "verify-files": "node scripts/verify-project-files.mjs",
+    "backup": "node scripts/backup-original.mjs",
+    "migrate": "node src/db/migrate.js",
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test tests/security-and-multiplayer.test.mjs"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "cookie": "^0.7.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-rate-limit": "^7.4.1",
+    "helmet": "^8.0.0",
+    "pg": "^8.13.1",
+    "socket.io": "^4.8.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "socket.io-client": "^4.8.1"
+  }
+}
